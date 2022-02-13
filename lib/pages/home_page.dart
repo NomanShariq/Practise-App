@@ -1,25 +1,21 @@
-// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
-
 import 'package:flutter/material.dart';
+
 
 class Homepage extends StatelessWidget {
   final int days = 30;
   final String name = "Noman";
-
-  const Homepage({Key? key}) : super(key: key);
-  @override
+  
+    @override
   Widget build(BuildContext context) {
     return  Scaffold(
     appBar: AppBar(
-      title: Text("Mobile Market"),
-    ),
-      body: Material(
-        child: Center(
+      title: Text("Navbar"),
+     ),
+      body: Center(
           child: Container(
             child: Text("Welcome to $days days of flutter by $name") ,
     ),
         ),  
-    ),
     drawer: Drawer(),
     );
   }
