@@ -1,4 +1,5 @@
 import 'package:firstapplications/pages/login_page.dart';
+import 'package:firstapplications/utilies/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:firstapplications/pages/home_page.dart';
 import 'package:firstapplications/pages/login_page.dart';
@@ -19,8 +20,8 @@ class MyApp extends StatelessWidget {
         brightness:Brightness.light,
       ),
       routes: {
-        "/" :(context) => LoginPage(),
-        "/home" :(context) => Homepage(),
+      "/" :(context) => LoginPage(),
+      "/home" :(context) => Homepage(),
       },
     );
   }
