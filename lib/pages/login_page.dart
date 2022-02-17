@@ -63,9 +63,7 @@ class _LoginPageState extends State<LoginPage> {
                         ? Icon(
                             Icons.done_outline,
                             color: Colors.white,
-                          )
-                        : Text(
-                            "Login",
+                          ): Text("Login",
                             style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
