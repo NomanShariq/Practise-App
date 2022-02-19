@@ -15,6 +15,5 @@ class Mythemes {
       );
       static ThemeData Darktheme(BuildContext context) => ThemeData(
             brightness: Brightness.dark,
-            )
-      );
+            );
 }
