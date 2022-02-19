@@ -12,18 +12,17 @@ class _LoginPageState extends State<LoginPage> {
 
   final _formkey = GlobalKey<FormState>();
 
-  movetohome(BuildContext context) async {
-    if (_formkey.currentState.validate()) {
-     setState(() {
-      changebutton = true;
-    });
-    await Future.delayed(Duration(seconds: 1));
-    await Navigator.pushNamed(context, "/home");
-    setState(() {
-      changebutton = false;
-    }); 
+  movetoHome(BuildContext context) async {
+    if (_formkey.currentState!.validate()){
+      setState(() {
+        changebutton = true;
+      });
+      await Future.delayed(Duration(seconds: 1));
+      await Navigator.pushNamed(context, "/home");
+      setState(() {
+        changebutton = false;
+      });
     }
-    
   }
 
   @override
@@ -47,6 +46,7 @@ class _LoginPageState extends State<LoginPage> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
             child: Form(
+              key: _formkey,
               child: Column(
                 children: [
                   TextFormField(
@@ -54,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                         hintText: "Enter username", labelText: "Username"),
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return "Enter Your Username";
+                        return "Username cannot be empty";
                       }
                       return null;
                     },
@@ -64,20 +64,18 @@ class _LoginPageState extends State<LoginPage> {
                     },
                   ),
                   TextFormField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          hintText: "Enter password", labelText: "Password"),
-                          validator: (value) {
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        hintText: "Enter password", labelText: "Password"),
+                    validator: (value) {
                       if (value!.isEmpty) {
                         return "Enter Your Password";
-                      }
-                      else if (value!.length<6) {
+                      } else if (value.length < 6) {
                         return "Password length should be 6";
                       }
                       return null;
                     },
-                          ),
-                      
+                  ),
                   SizedBox(
                     height: 35.0,
                   ),
@@ -85,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                     color: Colors.blue,
                     borderRadius: BorderRadius.circular(changebutton ? 50 : 8),
                     child: InkWell(
-                      onTap: () => movetohome(context),
+                      onTap: () => movetoHome(context),
                       child: AnimatedContainer(
                         duration: Duration(seconds: 1),
                         height: changebutton ? 50 : 36,
