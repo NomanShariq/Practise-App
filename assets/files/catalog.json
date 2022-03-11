@@ -1,0 +1,49 @@
+{
+    "Products" : [
+        {
+            "id": 1,
+            "name": "Samsung A31",
+            "desc":
+            "Samsung Galaxy A31;Size, 6.4 inches,",
+            "colour": "blue",
+            "price": 2000,
+            "image": "https://static-01.daraz.pk/p/0f2536a14aa0540cc2e01f02e752bd6b.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Apple iPhone 13 Pro Max ",
+            "desc":
+            "6.7 Inch Display - SingleSim and ESim ",
+            "colour": "blue",
+            "price": 1999,
+            "image": "https://static-01.daraz.pk/p/e6d6caa2920c4d5620a01cc1a10004c9.png"
+        },
+        {
+            "id": 3,
+            "name": "Apple iPhone 13 ",
+            "desc":
+            "128GB (Official Warranty Mercantile)",
+            "colour": "Red",
+            "price": 1299,
+            "image": "https://static-01.daraz.pk/p/5575b54898df8de34405c720704f11b7.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Samsung A51",
+            "desc":
+            " 6GB RAM - 128 GB ROM - 48MP Camera ",
+            "colour": "black",
+            "price": 4999,
+            "image": "https://static-01.daraz.pk/p/252d2dafec97bb73b01b97af181257e7.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Samsung S21 Ultra",
+            "desc":
+            "108MP Main Camera-6.8Display-12GB RAM-256GB ROM-5000 mAh Battery",
+            "colour": "black",
+            "price": 1294,
+            "image": "https://static-01.daraz.pk/p/acc216d21cd34f83651264d6859cbb8d.jpg"
+        }
+    ]
+}

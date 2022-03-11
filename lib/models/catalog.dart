@@ -1,20 +1,8 @@
-class Catalogitems {
-  static final products = [
-  Item(
-      id: 1,
-      name: "Samsung A31",
-      desc:
-          "Samsung Galaxy A31 ; Size, 6.4 inches, 98.9 cm2",
-      colour: "blue",
-      price: 2000,
-      image: "https://static-01.daraz.pk/p/0f2536a14aa0540cc2e01f02e752bd6b.jpg"),
-      
-];
+class CatalogModel {
+  static List<Item> items = [
 
-  static items(int i) {}
+  ];
 }
-
-
 
 class Item {
   final int id;
@@ -23,8 +11,32 @@ class Item {
   final String colour;
   final int price;
   final String image;
+  
+  Item({
+    required this.id,
+    required this.name,
+    required this.desc,
+    required this.colour,
+    required this.price,
+    required this.image,
+  });
 
-  Item({required this.id, required this.name, required this.desc, required this.colour, required this.price, required this.image});
+factory Item.fromMap(Map<String, dynamic> map) {
+    return Item(
+      id: map["id"],
+      name: map["name"],
+      desc: map["desc"],
+      colour: map["colour"],
+      price: map["price"],
+      image: map["image"],
+    );
+  } 
+  toMap() => {
+        "id": id,
+        "name": name,
+        "desc": desc,
+        "colour": colour,
+        "price": price,
+        "image": image,
+      };
 }
-
-

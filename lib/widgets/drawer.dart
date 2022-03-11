@@ -5,8 +5,7 @@ import 'package:cupertino_icons/cupertino_icons.dart';
 class Mydrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final imageUrl =
-        "https://www.google.com/search?q=avatars+icons&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjEv9TA3Yz2AhXQQfEDHYXHBl0Q_AUoAXoECAEQAw&biw=1600&bih=757&dpr=1#imgrc=jai2OL9CvAo52M";
+        
     return Drawer(
       child: DrawerHeader(
           padding: EdgeInsets.zero,
@@ -22,7 +21,7 @@ class Mydrawer extends StatelessWidget {
                       accountName: Text("Syed Noman Shariq"),
                       accountEmail: Text("Noman@gmail.com"),
                       currentAccountPicture:
-                          CircleAvatar(backgroundImage: NetworkImage(imageUrl)),
+                          CircleAvatar(backgroundImage: NetworkImage("https://upload.wikimedia.org/wikipedia/commons/thu…Roig_Mangues.jpg/220px-%C3%80lex_Roig_Mangues.jpg"),),
                     )),
                 ListTile(
                   leading: Icon(
