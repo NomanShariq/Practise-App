@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme : Mythemes.Lighttheme(context),
       darkTheme: Mythemes.Darktheme(context),
       debugShowCheckedModeBanner: false,
-      initialRoute: "/home",
+      initialRoute: "/detail",
       routes: {
       "/" :(context) => LoginPage(),
       "/home" :(context) => Homepage(),
