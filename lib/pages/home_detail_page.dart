@@ -14,17 +14,19 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Mythemes.Creamcolour,
-      appBar: AppBar(),
+      backgroundColor: context.canvasColor,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.all(4),
           children: [
-          "\$${catalog.price}".text.xl4.blue900.bold.make().py16().px12(),
-          ElevatedButton(onPressed: (){}, style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Mythemes.bluishcolour),shape: MaterialStateProperty.all(StadiumBorder())), 
-          child: Text("Buy")).wh(100, 40).py16().px12(),
+          "\$${catalog.price}".text.xl4.blue700.bold.make().p12().px12(),
+          ElevatedButton(onPressed: (){}, style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Mythemes.darkBluishcolour),shape: MaterialStateProperty.all(StadiumBorder())), 
+          child: Text("Add to cart")).wh(120, 40).py8().px12(),
           ],
           ),
       ),
@@ -38,16 +40,17 @@ class HomeDetailPage extends StatelessWidget {
           Expanded
           (
             child: VxArc(
-              height: 30.0,
+              height: 20.0,
               arcType: VxArcType.CONVEY,
               edge: VxEdge.TOP,
               child: Container(
-              color: Colors.white,
+              color: context.cardColor,
               width: context.screenWidth,
               child: Column(
                 children: [
                 catalog.name.text.xl2.bold.make(),
-                catalog.desc.text.lg.color(Colors.grey).make(),
+                catalog.desc.text.lg.color(Colors.grey).make(),10.heightBox,
+                "Amet duo gubergren aliquyam ipsum lorem elitr elitr eirmod. Ipsum consetetur eirmod dolores lorem sit amet lorem no. Dolores tempor ipsum kasd labore. Sanctus kasd takimata nonumy magna,Dolores nonumy.".text.center.make().p16(),
                 ],
               ).py32(),
            ),

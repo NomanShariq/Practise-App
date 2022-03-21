@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:firstapplications/widgets/home_widgets/catalog_items.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -37,12 +38,16 @@ class _HomepageState extends State<Homepage> {
         .map<Item>((items) => Item.fromMap(items))
         .toList();
     setState(() {});
-  }
+  } 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Mythemes.Creamcolour,
+        backgroundColor: context.canvasColor,
+        floatingActionButton: FloatingActionButton(onPressed: ()=> Navigator.pushNamed(context, "/cart"),
+        backgroundColor: Mythemes.darkBluishcolour,
+        child: Icon(CupertinoIcons.cart,color: Colors.white,),
+        ),
         body: SafeArea(
           child: Container(
             padding: Vx.m32,

@@ -14,7 +14,12 @@ class CatalogList extends StatelessWidget {
         itemBuilder: (context, index) {
           final catalog = CatalogModel.items[index];
           return InkWell(
-            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HomeDetailPage(catalog: catalog,))),
+            onTap: () => Navigator.push(context, MaterialPageRoute(
+              builder: (context) => HomeDetailPage
+              (catalog: CatalogModel.getById(2),
+              )
+            )
+          ),
             child: CatalogItem(catalog: catalog));
         });
   }
@@ -42,16 +47,17 @@ class CatalogItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                catalog.name.text.lg.bold.make(),
-                catalog.desc.text.color(Colors.grey).make(),
+                catalog.name.text.lg.bold.color(Colors.white).make().p2(),
+                catalog.desc.text.color(Colors.grey).make().p2(),
                 14.heightBox,
+                
                 ButtonBar(
                   alignment: MainAxisAlignment.spaceBetween,
                   buttonPadding: EdgeInsets.all(4),
                   children: [
                     "\$${catalog.price}".text.lg.bold.make(),
-                    ElevatedButton(onPressed: (){}, style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Mythemes.bluishcolour),shape: MaterialStateProperty.all(StadiumBorder())), 
-                    child: Text("Buy")),
+                    ElevatedButton(onPressed: (){}, style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Mythemes.darkBluishcolour),shape: MaterialStateProperty.all(StadiumBorder())), 
+                    child: Text("Add to cart")),
                   ],
                 ).pOnly(right: 8),
               ],
@@ -59,6 +65,6 @@ class CatalogItem extends StatelessWidget {
           ),
         ],
       ),
-    ).white.rounded.square(100).make().py16();
+    ).color(context.cardColor).rounded.square(100).make().py16();
   }
 }
