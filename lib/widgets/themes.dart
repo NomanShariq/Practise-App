@@ -10,13 +10,12 @@ class Mythemes {
     primaryColor: Colors.green,
     cardColor: Colors.white,
       canvasColor: Creamcolour,
-      accentColor: Colors.black,
       appBarTheme: AppBarTheme(
         color: Colors.white,
         iconTheme: IconThemeData(color: Colors.black),
         elevation: 0,
         titleTextStyle: TextStyle(color: Colors.black),
-      ));
+      ), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.black));
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(
     brightness: Brightness.dark,
