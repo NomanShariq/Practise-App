@@ -25,7 +25,7 @@ class HomeDetailPage extends StatelessWidget {
           buttonPadding: EdgeInsets.all(4),
           children: [
           "\$${catalog.price}".text.xl4.blue700.bold.make().p12().px12(),
-          ElevatedButton(onPressed: (){}, style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Mythemes.darkBluishcolour),shape: MaterialStateProperty.all(StadiumBorder())), 
+          ElevatedButton(onPressed: (){}, style: ButtonStyle(backgroundColor: MaterialStateProperty.all(context.primaryColor),shape: MaterialStateProperty.all(StadiumBorder())), 
           child: Text("Add to cart")).wh(120, 40).py8().px12(),
           ],
           ),

@@ -1,18 +1,13 @@
 import 'dart:convert';
 
-import 'package:firstapplications/widgets/home_widgets/catalog_items.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:velocity_x/velocity_x.dart';
-
 import 'package:firstapplications/models/catalog.dart';
-import 'package:firstapplications/widgets/themes.dart';
-
+import 'package:firstapplications/widgets/home_widgets/catalog_items.dart';
 import '../models/catalog.dart';
-import '../widgets/drawer.dart';
 import '../widgets/home_widgets/catalog_header.dart';
-import '../widgets/item_widget.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -45,7 +40,7 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
         backgroundColor: context.canvasColor,
         floatingActionButton: FloatingActionButton(onPressed: ()=> Navigator.pushNamed(context, "/cart"),
-        backgroundColor: Mythemes.darkBluishcolour,
+        backgroundColor: context.primaryColor,
         child: Icon(CupertinoIcons.cart,color: Colors.white,),
         ),
         body: SafeArea(
