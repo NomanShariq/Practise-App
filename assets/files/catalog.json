@@ -5,45 +5,45 @@
             "name": "Samsung A31",
             "desc":
             "Samsung Galaxy A31;Size, 6.4 inches,",
-            "colour": "blue",
+            "colour": "Black",
             "price": 2000,
-            "image": "https://static-01.daraz.pk/p/0f2536a14aa0540cc2e01f02e752bd6b.jpg"
+            "image": "https://s.alicdn.com/@sc04/kf/H472b9a0ad59a4aaca15969d5714ade65O.png_300x300.png"
         },
         {
             "id": 2,
             "name": "Apple iPhone 13 Pro Max ",
             "desc":
             "6.7 Inch Display - SingleSim and ESim ",
-            "colour": "blue",
+            "colour": "Golden",
             "price": 1999,
             "image": "https://static-01.daraz.pk/p/e6d6caa2920c4d5620a01cc1a10004c9.png"
         },
         {
             "id": 3,
-            "name": "Apple iPhone 13 ",
+            "name": "OPPO A16 ",
             "desc":
-            "128GB (Official Warranty Mercantile)",
-            "colour": "Red",
+            "4GB Ram And 64GB Rom Al Triple Camera",
+            "colour": "Black",
             "price": 1299,
-            "image": "https://static-01.daraz.pk/p/5575b54898df8de34405c720704f11b7.jpg"
+            "image": "https://static-01.daraz.pk/p/3c2288b6d55931c54698a7e6fba253a4.png"
         },
         {
             "id": 4,
-            "name": "Samsung A51",
+            "name": "Samsung Galaxy A12 ",
             "desc":
-            " 6GB RAM - 128 GB ROM - 48MP Camera ",
-            "colour": "black",
+            "48MP Main Camera 4GB RAM 128G ROM",
+            "colour": "Whitw",
             "price": 4999,
-            "image": "https://static-01.daraz.pk/p/252d2dafec97bb73b01b97af181257e7.jpg"
+            "image": "https://static-01.daraz.pk/p/5511bef3ff91386b1815297bd6bcf64e.png"
         },
         {
             "id": 5,
             "name": "Samsung S21 Ultra",
             "desc":
-            "108MP Display-12GB RAM-256GB ROM-5000 mAh Battery",
-            "colour": "black",
+            "108MP Display-12GB RAM-256GB ",
+            "colour": "Black",
             "price": 1294,
-            "image": "https://static-01.daraz.pk/p/acc216d21cd34f83651264d6859cbb8d.jpg"
+            "image": "https://static-01.daraz.pk/p/db655adb10b324d9434c0a47a9686924.png"
         }
     ]
 }
