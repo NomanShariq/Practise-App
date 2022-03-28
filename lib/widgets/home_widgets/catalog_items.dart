@@ -1,7 +1,5 @@
-import 'package:firstapplications/models/cart.dart';
 import 'package:firstapplications/models/catalog.dart';
 import 'package:firstapplications/pages/home_detail_page.dart';
-import 'package:firstapplications/widgets/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'add_to_cart.dart';

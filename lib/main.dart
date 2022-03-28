@@ -1,14 +1,16 @@
+import 'package:firstapplications/core/store.dart';
+import 'package:firstapplications/models/cart.dart';
+import 'package:firstapplications/models/catalog.dart';
 import 'package:firstapplications/pages/login_page.dart';
-import 'package:firstapplications/utilies/routes.dart';
 import 'package:firstapplications/widgets/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:firstapplications/pages/home_page.dart';
 import 'package:firstapplications/pages/cartpage.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 
 void main() {
-  runApp(MyApp());
+  runApp(VxState(store: MyStore(CatalogModel(), CartModel()), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {

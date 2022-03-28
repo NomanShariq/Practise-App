@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:cupertino_icons/cupertino_icons.dart';
 
 class Mydrawer extends StatelessWidget {
   @override
@@ -13,7 +12,7 @@ class Mydrawer extends StatelessWidget {
           child: Container(
             color: Colors.green,
             child: ListView(
-              children: [
+              children: const [
                 DrawerHeader(
                     padding: EdgeInsets.zero,
                     child: UserAccountsDrawerHeader(

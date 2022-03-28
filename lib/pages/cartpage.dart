@@ -1,6 +1,4 @@
 import 'package:firstapplications/models/cart.dart';
-import 'package:firstapplications/models/catalog.dart';
-import 'package:firstapplications/widgets/home_widgets/catalog_items.dart';
 import 'package:firstapplications/widgets/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -56,14 +54,7 @@ class _CartTotal extends StatelessWidget {
   }
 }
 
-class _CartList extends StatefulWidget {
-  const _CartList({Key? key}) : super(key: key);
-
-  @override
-  State<_CartList> createState() => __CartListState();
-}
-
-class __CartListState extends State<_CartList> {
+class _CartList extends StatelessWidget {
   final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
@@ -79,9 +70,9 @@ class __CartListState extends State<_CartList> {
                 color: Colors.red,
                 onPressed: () {
                   _cart.remove(_cart.items[index]);
-                  setState(() {
+                  // // setState(() {
                     
-                  });
+                  // });
                 },
               ),
               title: _cart.items[index].name.text.make(),

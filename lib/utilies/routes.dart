@@ -1,7 +1,7 @@
 class MyRoutes {
-  static String LoginRoute = "/login";
-  static String HomeRoute = "/home";
-  static String Cartpage = "/cart";
-  static String Home_detail_Route = "/detail";
+  static String loginRoute = "/login";
+  static String homeRoute = "/home";
+  static String cartpage = "/cart";
+  static String home_detail_Route = "/detail";
 
 }
