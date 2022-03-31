@@ -38,7 +38,9 @@ class _CartTotal extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          VxBuilder(builder: ((context, store, status) => "\$${_cart.totalPrize}"
+          VxBuilder(
+            builder: (
+              (context, store, status) => "\$${_cart.totalPrize}"
           .text.
           xl4.blueGray800.make()), mutations: {RemoveMutations}),
           ElevatedButton(
