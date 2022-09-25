@@ -8,7 +8,6 @@ import 'package:firstapplications/pages/home_page.dart';
 import 'package:firstapplications/pages/cartpage.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-
 void main() {
   runApp(VxState(store: MyStore(CatalogModel(), CartModel()), child: MyApp()));
 }
@@ -17,15 +16,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.light,  
-      theme : Mythemes.lightTheme(context),
+      themeMode: ThemeMode.light,
+      theme: Mythemes.lightTheme(context),
       darkTheme: Mythemes.darkTheme(context),
       debugShowCheckedModeBanner: false,
       initialRoute: "/home",
       routes: {
-      "/" :(context) => LoginPage(),
-      "/home" :(context) => Homepage(),
-      "/cart" :(context) => Cartpage(),
+        "/": (context) => LoginPage(),
+        "/home": (context) => Homepage(),
+        "/cart": (context) => Cartpage(),
       },
     );
   }

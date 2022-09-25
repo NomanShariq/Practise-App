@@ -40,18 +40,17 @@ class CatalogItem extends StatelessWidget {
         children: [
           Hero(
               tag: Key(catalog.id.toString()),
-              child: CatalogImage(image: catalog.image, key: null,)),
+              child: CatalogImage(
+                image: catalog.image,
+                key: null,
+              )),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                catalog.name.text.lg.bold
-                    .color(context.primaryColor)
-                    .make()
-                    .p2(),
-                catalog.desc.text.color(Colors.grey).make().p2(),
-                14.heightBox,
+                catalog.name.text.lg.bold.color(context.primaryColor).make(),
+                catalog.desc.text.color(Colors.grey).make(),
                 ButtonBar(
                   alignment: MainAxisAlignment.spaceBetween,
                   buttonPadding: EdgeInsets.all(4),
@@ -61,14 +60,14 @@ class CatalogItem extends StatelessWidget {
                       catalog: catalog,
                     ),
                   ],
-                ).pOnly(right: 8),
+                ).pOnly(
+                  right: 8,
+                ),
               ],
             ),
           ),
         ],
       ),
-    ).color(context.cardColor).rounded.square(100).make().py16();
+    ).color(context.cardColor).rounded.square(120).make().py8();
   }
 }
-
-

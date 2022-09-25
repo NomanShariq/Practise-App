@@ -11,7 +11,7 @@ class Itemwidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 0.0,
+      elevation: 4.0,
       child: ListTile(
         onTap: (() {
           print("Ordered");

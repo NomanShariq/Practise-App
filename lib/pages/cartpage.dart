@@ -13,8 +13,9 @@ class Cartpage extends StatelessWidget {
     return Scaffold(
         backgroundColor: context.canvasColor,
         appBar: AppBar(
+          centerTitle: true,
           backgroundColor: Colors.transparent,
-          title: "Cart".text.xl2.make().centered(),
+          title: "Cart".text.xl3.make(),
         ),
         body: Column(
           children: [
@@ -39,10 +40,9 @@ class _CartTotal extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           VxBuilder(
-            builder: (
-              (context, store, status) => "\$${_cart.totalPrize}"
-          .text.
-          xl4.blueGray800.make()), mutations: {RemoveMutations}),
+              builder: ((context, store, status) =>
+                  "\$${_cart.totalPrize}".text.xl4.make()),
+              mutations: {RemoveMutations}),
           ElevatedButton(
                   onPressed: () {
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -52,7 +52,7 @@ class _CartTotal extends StatelessWidget {
                   style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all(Mythemes.bluishcolour)),
-                  child: Text("buy"))
+                  child: Text("Buy"))
               .w24(context),
         ],
       ),
@@ -75,9 +75,8 @@ class _CartList extends StatelessWidget {
               trailing: IconButton(
                 icon: Icon(Icons.remove_circle_outline_outlined),
                 color: Colors.red,
-                onPressed: () =>
-                  RemoveMutations(_cart.items[index]),
-                  ),
+                onPressed: () => RemoveMutations(_cart.items[index]),
+              ),
               title: _cart.items[index].name.text.make(),
             ),
           );

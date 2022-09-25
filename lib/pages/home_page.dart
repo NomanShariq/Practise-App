@@ -35,21 +35,24 @@ class _HomepageState extends State<Homepage> {
         .map<Item>((items) => Item.fromMap(items))
         .toList();
     setState(() {});
-  } 
+  }
 
   @override
   Widget build(BuildContext context) {
-        final CartModel _cart = (VxState.store as MyStore).cart;
+    final CartModel _cart = (VxState.store as MyStore).cart;
 
-    return Scaffold( 
+    return Scaffold(
         backgroundColor: context.canvasColor,
         floatingActionButton: VxBuilder(
-          mutations: {RemoveMutations,AddMutations},
-          builder:(context, store, status) => FloatingActionButton(
+          mutations: {RemoveMutations, AddMutations},
+          builder: (context, store, status) => FloatingActionButton(
             onPressed: () => Navigator.pushNamed(context, "/cart"),
-          backgroundColor: context.primaryColor,
-          child: Icon(CupertinoIcons.cart,color: Colors.white,),
-          ).badge(color:Colors.grey,count: _cart.items.length),
+            backgroundColor: context.primaryColor,
+            child: Icon(
+              CupertinoIcons.cart,
+              color: Colors.white,
+            ),
+          ).badge(color: Colors.grey, count: _cart.items.length),
         ),
         body: SafeArea(
           child: Container(
@@ -58,26 +61,16 @@ class _HomepageState extends State<Homepage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CatalogHeader(),
+                SizedBox(
+                  height: 30,
+                ),
                 if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
                   (CatalogList().expand())
                 else
-                  (
-                  CircularProgressIndicator().centered().expand()
-                  )
+                  (CircularProgressIndicator().centered().expand())
               ],
-
-
-              
             ),
           ),
         ));
   }
 }
-
-
-
-
-
-
-
-
